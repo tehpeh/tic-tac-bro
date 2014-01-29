@@ -1,0 +1,27 @@
+<h1>Game on, bro!</h1>
+
+<div id="game">
+  <div class="row top clearfix">
+    <div class="cell left" ng-bind="games[gameId].board[0].mark" ng-click="playMove(games[gameId].board[0])"></div>
+    <div class="cell" ng-bind="games[gameId].board[1].mark" ng-click="playMove(games[gameId].board[1])"></div>
+    <div class="cell right" ng-bind="games[gameId].board[2].mark" ng-click="playMove(games[gameId].board[2])"></div>
+  </div>
+  <div class="row clearfix">
+    <div class="cell left" ng-bind="games[gameId].board[3].mark" ng-click="playMove(games[gameId].board[3])"></div>
+    <div class="cell" ng-bind="games[gameId].board[4].mark" ng-click="playMove(games[gameId].board[4])"></div>
+    <div class="cell right" ng-bind="games[gameId].board[5].mark" ng-click="playMove(games[gameId].board[5])"></div>
+  </div>
+  <div class="row bottom clearfix">
+    <div class="cell left" ng-bind="games[gameId].board[6].mark" ng-click="playMove(games[gameId].board[6])"></div>
+    <div class="cell" ng-bind="games[gameId].board[7].mark" ng-click="playMove(games[gameId].board[7])"></div>
+    <div class="cell right" ng-bind="games[gameId].board[8].mark" ng-click="playMove(games[gameId].board[8])"></div>
+  </div>
+  <div id="waiting" ng-show="games[gameId].waiting">
+    Waiting for opponent...
+  </div>
+</div>
+<div ng-hide="games[gameId].waiting">
+<div id="your-turn" ng-show="games[gameId].turn == player">
+  Your turn
+</div>
+</div>
